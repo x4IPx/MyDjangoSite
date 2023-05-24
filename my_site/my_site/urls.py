@@ -28,5 +28,6 @@ def hello_def(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', hello_def),
+    path('', hello_def),
+    #path('hello/', hello_def),
 ]
