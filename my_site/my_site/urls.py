@@ -16,18 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.http import HttpResponse
+#from django.http import HttpResponse
+from my_site import views
 
 
-
-def hello_def(request):
-    print('Кто-то зашёл на главную!')
-    return HttpResponse('Здесь могла быть ваша реклама!')
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', hello_def),
+    path('', views.hello_def),
     #path('hello/', hello_def),
 ]
