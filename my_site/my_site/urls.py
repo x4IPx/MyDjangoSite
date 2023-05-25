@@ -29,5 +29,8 @@ urlpatterns = [
     path('t1', views.t1),
     path('index1', views.index1),
     path('index2', views.index2),
+    path("set", views.set),
+    path("get", views.get),
+
     #path('hello/', hello_def),
 ]
