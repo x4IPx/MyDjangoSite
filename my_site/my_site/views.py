@@ -14,3 +14,11 @@ def t1(request):
     context = {}
     rendered_page = template.render(context, request)
     return HttpResponse(rendered_page)
+
+
+
+def index1(request):
+    template = loader.get_template('index1.html')
+    context = {}
+    rendered_page = template.render(context, request)
+    return HttpResponse(rendered_page)
