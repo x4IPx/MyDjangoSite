@@ -62,3 +62,8 @@ def get(request):
         return HttpResponse('В куках ничего нет')
 
 
+from django.shortcuts import render
+
+def index3(request):
+    data = {"header": "Hello Django", "message": "Welcome to Python"}
+    return render(request, "index3.html", context=data)

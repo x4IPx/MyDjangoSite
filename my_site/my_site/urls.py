@@ -31,6 +31,7 @@ urlpatterns = [
     path('index2', views.index2),
     path("set", views.set),
     path("get", views.get),
+    path("index3", views.index3),
 
     #path('hello/', hello_def),
 ]
