@@ -2,6 +2,21 @@
 
 from django.http import HttpResponse
 
+def index(request):
+    return render(request, "index.html")
+
+def contacts(request):
+    return render(request, "contacts.html")
+
+def feedback(request):
+    return render(request, "feedback.html")
+
+def posttelegram(request):
+    # получаем из данных запроса POST отправленные через форму данные
+    name = request.POST.get("name", "Undefined")
+    age = request.POST.get("age", 1)
+    return HttpResponse(f"<h2>Name: {name}  Age: {age}</h2>")
+
 
 def hello_def(request):
     print('Кто-то зашёл на главную!')
@@ -10,7 +25,7 @@ def hello_def(request):
 
 from django.template import loader
 def t1(request):
-    template = loader.get_template('base.html')
+    template = loader.get_template('base4.html')
     context = {}
     rendered_page = template.render(context, request)
     return HttpResponse(rendered_page)

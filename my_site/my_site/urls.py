@@ -24,7 +24,11 @@ from django.views.generic import TemplateView
 
 
 urlpatterns = [
-    path("", views.index2),
+    path("", views.index),
+    path("contacts/", views.contacts),
+    path("feedback", views.feedback),
+    path("posttelegram/", views.posttelegram),
+    path("base2", views.index2),
     path("contacts2/", views.contacts2),
     path('admin/', admin.site.urls),
     path('advertising', views.hello_def),
