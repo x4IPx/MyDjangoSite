@@ -1,6 +1,7 @@
 # views.py
 
 from django.http import HttpResponse
+from my_site import bot
 
 def index(request):
     return render(request, "index.html")
@@ -16,6 +17,7 @@ def posttelegram(request):
     telegram_text = request.POST.get("text", "Undefined")
     #name = request.POST.get("name", "Undefined")
     #age = request.POST.get("age", 1)
+    bot.post_message(telegram_text)
     print(telegram_text)
     return HttpResponse(f"<h2>Спасибо за отзыв! Отпавленное сообщение : {telegram_text} </h2>")
 
