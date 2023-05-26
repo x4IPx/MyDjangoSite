@@ -8,8 +8,7 @@
 	<h2>User form</h2>
 	<form method="post" action="posttelegram/">
 		{% csrf_token %}
-		<p>Name:<br> <input name="name" /></p>
-		<p>Age:<br> <input name="age" type="number" /></p>
+		<p>Обратная связь:<br> <input name="text" /></p>
 		<input type="submit" value="Send" />
 	</form>
 </body>

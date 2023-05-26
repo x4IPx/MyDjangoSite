@@ -13,9 +13,11 @@ def feedback(request):
 
 def posttelegram(request):
     # получаем из данных запроса POST отправленные через форму данные
-    name = request.POST.get("name", "Undefined")
-    age = request.POST.get("age", 1)
-    return HttpResponse(f"<h2>Name: {name}  Age: {age}</h2>")
+    telegram_text = request.POST.get("text", "Undefined")
+    #name = request.POST.get("name", "Undefined")
+    #age = request.POST.get("age", 1)
+    print(telegram_text)
+    return HttpResponse(f"<h2>Спасибо за отзыв! Отпавленное сообщение : {telegram_text} </h2>")
 
 
 def hello_def(request):
