@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 #from django.http import HttpResponse
 from my_site import views
-
+from django.views.generic import TemplateView
 
 
 
@@ -32,6 +32,6 @@ urlpatterns = [
     path("set", views.set),
     path("get", views.get),
     path("index3", views.index3),
-
+    path("about1/", TemplateView.as_view(template_name="about1.html", extra_context={"yaya_header": "Метод TemplateView говорит что здесь могла быть ваша реклама"})),
     #path('hello/', hello_def),
 ]
