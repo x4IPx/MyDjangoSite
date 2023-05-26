@@ -24,13 +24,15 @@ from django.views.generic import TemplateView
 
 
 urlpatterns = [
+    path("", views.index2),
+    path("contacts2/", views.contacts2),
     path('admin/', admin.site.urls),
-    path('', views.hello_def),
+    path('advertising', views.hello_def),
     path('t1', views.t1),
     path('index1', views.index1),
-    path('index2', views.index2),
-    path("set", views.set),
-    path("get", views.get),
+    path('index1_2', views.index2),
+    path("set", views.set), # Проверка работы кеша , например можно ввести http://IP:8000/set?username=test3
+    path("get", views.get), # Получение значения из кеша 
     path("index3", views.index3),
     path("about1/", TemplateView.as_view(template_name="about1.html", extra_context={"yaya_header": "Метод TemplateView говорит что здесь могла быть ваша реклама"})),
     #path('hello/', hello_def),

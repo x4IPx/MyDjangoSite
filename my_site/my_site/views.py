@@ -26,7 +26,7 @@ def index1(request):
 
 from django.http import HttpResponse
  
-def index2(request):
+def index1_2(request):
     host = request.META["HTTP_HOST"] # получаем адрес сервера
     user_agent = request.META["HTTP_USER_AGENT"]    # получаем данные бразера
     path = request.path     # получаем запрошенный путь
@@ -67,3 +67,14 @@ from django.shortcuts import render
 def index3(request):
     data = {"header": "Hello Django", "message": "Welcome to Python"}
     return render(request, "index3.html", context=data)
+
+
+
+
+from django.shortcuts import render
+
+def index2(request):
+    return render(request, "index2.html")
+
+def contacts2(request):
+    return render(request, "contacts2.html")
