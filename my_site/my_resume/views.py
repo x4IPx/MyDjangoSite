@@ -1,7 +1,7 @@
 # views.py
 
 from django.http import HttpResponse
-from my_site import bot
+from my_resume import bot
 
 def index(request):
     return render(request, "index.html")
