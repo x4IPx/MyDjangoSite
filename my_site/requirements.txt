@@ -6,9 +6,19 @@
 #
 asgiref==3.6.0
     # via django
+certifi==2023.5.7
+    # via requests
+charset-normalizer==3.1.0
+    # via requests
 django==4.2.1
     # via -r requirements.in
+idna==3.4
+    # via requests
 python-dotenv==1.0.0
+    # via -r requirements.in
+requests==2.31.0
     # via -r requirements.in
 sqlparse==0.4.4
     # via django
+urllib3==2.0.2
+    # via requests
