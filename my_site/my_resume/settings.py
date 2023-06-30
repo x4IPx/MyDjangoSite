@@ -40,15 +40,7 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 # Для примера: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 #ALLOWED_HOSTS = ['*']
-
-CSRF_TRUSTED_ORIGINS = [
-            "http://localhost:8000",
-            "http://192.168.77.32:8000",
-            "http://127.0.0.0:8000",
-            "http://localhost:1337",
-            "http://192.168.77.32:1337",
-            "http://127.0.0.0:1337",
-                ]
+CSRF_TRUSTED_ORIGINS = os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS").split(' ') # С 4.0 версии 
 
 
 
