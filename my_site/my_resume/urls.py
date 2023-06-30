@@ -19,8 +19,10 @@ from django.urls import path
 #from django.http import HttpResponse
 from my_resume import views
 from django.views.generic import TemplateView
-
-
+#Для upload
+from django.conf import settings
+from django.conf.urls.static import static
+from upload.views import image_upload
 
 
 urlpatterns = [
@@ -39,5 +41,11 @@ urlpatterns = [
     path("get", views.get), # Получение значения из кеша 
     path("index3", views.index3),
     path("about1/", TemplateView.as_view(template_name="about1.html", extra_context={"yaya_header": "Метод TemplateView говорит что здесь могла быть ваша реклама"})),
+    path("upload/", image_upload, name="upload"),
     #path('hello/', hello_def),
 ]
+
+
+if bool(settings.DEBUG):
+
+        urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

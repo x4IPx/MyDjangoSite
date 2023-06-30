@@ -97,3 +97,5 @@ def index2(request):
 
 def contacts2(request):
     return render(request, "contacts2.html")
+
+

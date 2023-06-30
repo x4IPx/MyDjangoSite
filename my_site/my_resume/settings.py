@@ -41,6 +41,16 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 #ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+            "http://localhost:8000",
+            "http://192.168.77.32:8000",
+            "http://127.0.0.0:8000",
+            "http://localhost:1337",
+            "http://192.168.77.32:1337",
+            "http://127.0.0.0:1337",
+                ]
+
+
 
 # Application definition
 
@@ -51,7 +61,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'my_resume'
+    'my_resume',
+    'upload'
 ]
 
 MIDDLEWARE = [
@@ -154,7 +165,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
-
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "mediafiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
