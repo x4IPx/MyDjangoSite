@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 #from django.http import HttpResponse
 from my_resume import views
+from cv import cv_views
+from django.views.generic import TemplateView
 from django.views.generic import TemplateView
 #Для upload
 from django.conf import settings
@@ -27,6 +29,7 @@ from upload.views import image_upload
 
 urlpatterns = [
     path("", views.index),
+    path("2", cv_views.index),
     path("contacts/", views.contacts),
     path("feedback", views.feedback),
     path("posttelegram/", views.posttelegram),

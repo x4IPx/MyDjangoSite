@@ -25,7 +25,7 @@ services:
   nginx:
     build: ./nginx
     container_name: MyDjangoSite_nginx
-    volumes:i
+    volumes:
       - static_volume:/home/app/web/staticfiles
       - media_volume:/home/app/web/mediafiles
     ports:
