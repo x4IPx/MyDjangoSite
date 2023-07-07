@@ -28,8 +28,8 @@ from upload.views import image_upload
 
 
 urlpatterns = [
-    path("2", views.index),
-    path("", cv_views.index),
+    path("", views.index),
+    path("2", cv_views.index),
     path("contacts/", views.contacts),
     path("feedback", views.feedback),
     path("posttelegram/", views.posttelegram),
