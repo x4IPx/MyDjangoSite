@@ -43,7 +43,7 @@ yourContact = [
 ]
 
 # type here your birthday and (your age)
-yourBirthday = "10 Jan 1991 (30)"
+yourBirthday = "09 Сентября 1991"
 
 # type here your skills
 yourSkills = [ 
@@ -62,7 +62,7 @@ skillsPercent = [
     '80',
     '75',
     '80',
-    '85',
+    'Junior',
 ]
 
 # type here your hobbies
