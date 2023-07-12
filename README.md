@@ -1,7 +1,7 @@
 # MyDjangoSite
 Быстрый запуск:
 ```sh
-https://github.com/x4IPx/MyDjangoSite.git
+git clone https://github.com/x4IPx/MyDjangoSite.git
 cd MyDjangoSite
 cp .env.prod.example .env.prod
 ```
