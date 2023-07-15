@@ -2,16 +2,16 @@
 titleCV = "Django Personal CV"
 
 # type here your name and surname
-yourName = "Adam Anderson"
+yourName = "Барков2 Николай"
 
 # type here current profession
-yourProfession = "Software Engineer"
+yourProfession = "Системный администратор Linux"
 
 # type here your bio
-yourBio = "Hey I'm a senior software engineer. Same time a travel enthusiast."
+yourBio = "Привет. Я системный администратор."
 
 # type here your current location
-yourCountry = "London/UK"
+yourCountry = "Москва"
 
 # if you want add another social media account, add here icon code of it
 socialContact = [
@@ -27,7 +27,7 @@ socialContact = [
 # type here some contact
 yourContact = [
     # github link
-    'https://github.com',
+    'https://github.com/x4IPx/MyAnsible',
     # linkedin link
     'https://linkedin.com',
     # instagram link
@@ -37,9 +37,9 @@ yourContact = [
     # facebook link
     'https://facebook.com',
     # mailto:...your email
-    'mailto:asd@domain.com',
+    'mailto:x4ipx91@gmail.com',
     # tel:...your phone no
-    'tel:05554446699'
+    'tel:89652179849'
 ]
 
 # type here your birthday and (your age)
@@ -47,30 +47,30 @@ yourBirthday = "09 Сентября 1991"
 
 # type here your skills
 yourSkills = [ 
-    'HTML/CSS',
-    'JavaScript',
-    'PHP',
-    'MySQL',
-    'C#',
+#    'HTML/CSS',
+#    'JavaScript',
+    'Ansible',
+    'PostgreSQL',
+    'Администрирование Windiws/linux серверов',
     'Python'
 ]
 
 # type here your skills percent rate
 skillsPercent = [
-    '95',
-    '90',
-    '80',
-    '75',
-    '80',
-    'Junior',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
 ]
 
 # type here your hobbies
 yourHobbies = [
-    'Computer Gaming',
-    'Swimming',
-    'Playing Basketball',
-    'Watching Horror Films'
+    'Бег',
+    'Йога/медитация',
+    'Танцы',
+    'Катание на велосипеде'
 ]
 
 # type here your certificates
