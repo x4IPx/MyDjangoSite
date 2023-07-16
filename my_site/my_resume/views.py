@@ -14,7 +14,7 @@ def feedback(request):
 
 def posttelegram(request):
     # получаем из данных запроса POST отправленные через форму данные
-    telegram_text = request.POST.get("text", "Undefined")
+    telegram_text = request.POST.get("comment", "Undefined")
     #name = request.POST.get("name", "Undefined")
     #age = request.POST.get("age", 1)
     bot.post_message(telegram_text)

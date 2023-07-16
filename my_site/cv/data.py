@@ -2,13 +2,13 @@
 titleCV = "Django Personal CV"
 
 # type here your name and surname
-yourName = "Барков2 Николай"
+yourName = "Барков Николай"
 
 # type here current profession
 yourProfession = "Системный администратор Linux"
 
 # type here your bio
-yourBio = "Привет. Я системный администратор."
+yourBio = "Здраствуйте. Так как у меня мало опыта с Ansible, Docker и GIT. Сделал резюмэ демонстрирующие мои навыки работы с Ansible, Docker и GIT." 
 
 # type here your current location
 yourCountry = "Москва"
@@ -47,8 +47,8 @@ yourBirthday = "09 Сентября 1991"
 
 # type here your skills
 yourSkills = [ 
-#    'HTML/CSS',
-#    'JavaScript',
+    'GIT',
+    'Docker',
     'Ansible',
     'PostgreSQL',
     'Администрирование Windiws/linux серверов',
