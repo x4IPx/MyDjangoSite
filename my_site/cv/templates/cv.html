@@ -83,9 +83,13 @@
                 {% endif %}
                 {% if yourExtras %}
                 <div class="extras">
-                    <ol aria-label="Extras">
-                        {{ yourExtras | safe }}
-                    </ol>
+                    <ol aria-label="Обратная связь">
+			    <form method="post" action="posttelegram/">
+				    {% csrf_token %}
+				    <p>Обратная связь:<br> <input name="text" /></p>
+				    <input type="submit" value="Send" />
+			    </form>
+		    </ol>
                 </div>
                 {% endif %}
             </div>
