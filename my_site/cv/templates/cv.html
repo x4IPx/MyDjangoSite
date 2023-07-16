@@ -86,7 +86,7 @@
                     <ol aria-label="Обратная связь">
 			    <form method="post" action="posttelegram/">
 				    {% csrf_token %}
-				    <p>Обратная связь:<br> <input name="text" /></p>
+				    <p>Обратная связь:<br> <input name="text" class="posttelegram_class"  /></p>
 				    <input type="submit" value="Send" />
 			    </form>
 		    </ol>
