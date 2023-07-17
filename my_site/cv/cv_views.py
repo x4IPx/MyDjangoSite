@@ -3,6 +3,8 @@ from django.shortcuts import render
 from .data import *
 import html
 from django.utils.html import escape
+from forms import TelegramForm
+from my_resume import bot
 
 def getSkills():
     i = 0
@@ -90,3 +92,17 @@ def index(request):
 
 #def home(request):
     #return render(response, "templates/home.html")
+
+
+def feedback(request):
+    return render(request, "feedback.html")
+
+def feedbackDjango(request):
+    if request.method == "POST":
+        TelegremMessage = request.POST.get("TelegremMessage", "Ошибка которую наврядти ты увидешь")
+        bot.post_message(TelegremMessage)
+        print(TelegremMessage)
+        return HttpResponse(f"<h2>Сообщение отправленно: {TelegremMessage}</h2>")
+    else:
+        userform = TelegramForm()
+        return render(request, "feedbackDjango.html", {"form": userform})
