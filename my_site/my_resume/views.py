@@ -16,7 +16,9 @@ def feedback(request):
 
 def feedbackDjango(request):
     if request.method == "POST":
-        TelegremMessage = request.POST.get("TelegremMessage")
+        TelegremMessage = request.POST.get("TelegremMessage", "Ошибка которую наврядти ты увидешь")
+        bot.post_message(TelegremMessage)
+        print(TelegremMessage)
         return HttpResponse(f"<h2>Сообщение отправленно: {TelegremMessage}</h2>")
     else:
         userform = TelegramForm()
