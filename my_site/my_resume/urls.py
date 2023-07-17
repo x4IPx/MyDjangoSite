@@ -32,6 +32,7 @@ urlpatterns = [
     path("2", cv_views.index),
     path("contacts/", views.contacts),
     path("feedback", views.feedback),
+    path("feedbackDjango", views.feedbackDjango),
     path("posttelegram/", views.posttelegram),
     path("base2", views.index2),
     path("contacts2/", views.contacts2),

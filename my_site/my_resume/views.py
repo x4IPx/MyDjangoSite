@@ -2,6 +2,8 @@
 
 from django.http import HttpResponse
 from my_resume import bot
+from forms import TelegramForm
+
 
 def index(request):
     return render(request, "index.html")
@@ -11,6 +13,17 @@ def contacts(request):
 
 def feedback(request):
     return render(request, "feedback.html")
+
+def feedbackDjango(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        age = request.POST.get("age")
+        return HttpResponse(f"<h2>Привет, {name}, твой возраст: {age}</h2>")
+    else:
+        userform = TelegramForm()
+        return render(request, "feedbackDjango.html", {"form": userform})
+
+
 
 def posttelegram(request):
     # получаем из данных запроса POST отправленные через форму данные
