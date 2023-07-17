@@ -1,5 +1,4 @@
 from django import forms
 
 class TelegramForm(forms.Form):
-    name = forms.CharField()
-    age = forms.IntegerField()
+    comment = forms.CharField(label="Комментарий", widget=forms.Textarea)
