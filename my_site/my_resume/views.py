@@ -16,9 +16,8 @@ def feedback(request):
 
 def feedbackDjango(request):
     if request.method == "POST":
-        name = request.POST.get("name")
-        age = request.POST.get("age")
-        return HttpResponse(f"<h2>Привет, {name}, твой возраст: {age}</h2>")
+        TelegremMessage = request.POST.get("TelegremMessage")
+        return HttpResponse(f"<h2>Сообщение отправленно: {TelegremMessage}</h2>")
     else:
         userform = TelegramForm()
         return render(request, "feedbackDjango.html", {"form": userform})
