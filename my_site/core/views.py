@@ -1,7 +1,7 @@
 # views.py
 
 from django.http import HttpResponse
-from my_resume import bot
+from core import bot
 from forms import TelegramForm
 
 

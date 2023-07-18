@@ -4,7 +4,7 @@ from .data import *
 import html
 from django.utils.html import escape
 from forms import TelegramForm
-from my_resume import bot
+from core import bot
 
 def getSkills():
     i = 0
