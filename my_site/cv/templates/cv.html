@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="general__area">
+<div class="general__area">
         <div class="top__area">
             <div class="bio__area">
                 <div class="photo__area"><img src="{% static 'img/photo.jpg' %}" alt="{{ yourName | safe }}" /></div>
@@ -89,12 +89,21 @@
 				    <table>
 					    {{ form }}
 				    </table>
+				    <div>
+					    {% if messages %}
+					    {% for message in messages %}
+					    <li class="{{ message.tags }}">
+						    {{ message|safe }}
+					    </li>
+					    {% endfor %}
+					    {% endif %}
+				    </div>
 				    <input type="submit" value="Send" >
 			    </form>
 		    </ol>
-                </div>
-                {% endif %}
-            </div>
+		</div>
+		{% endif %}
+	    </div>
         </div>
     </div>
     <footer>{{ footerText | safe }}</footer>

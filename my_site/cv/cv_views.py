@@ -5,6 +5,7 @@ import html
 from django.utils.html import escape
 from forms import TelegramForm
 from core import bot
+from django.contrib import messages
 
 def getSkills():
     i = 0
@@ -94,7 +95,9 @@ def index(request):
         TelegremMessage = request.POST.get("TelegremMessage", "Ошибка которую наврядти ты увидешь")
         bot.post_message(TelegremMessage)
         print(TelegremMessage)
-        return HttpResponse(f"<h2>Сообщение отправленно: {TelegremMessage}</h2>")
+        messages.success(request, 'Сообщение отправленно. Спасибо за отзыв!')
+        return render(request, "cv.html", data())
+#        return HttpResponse(f"<h2>Сообщение отправленно: {TelegremMessage}</h2>")
     else:
         userform = TelegramForm()
 #        return render(request, "feedbackDjango.html", {"form": userform})
