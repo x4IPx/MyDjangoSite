@@ -69,6 +69,7 @@ def getSocials(shema, link):
             return html.unescape(gotoshow)
 
 def data():
+    userform = TelegramForm()
     return {
         'titleCV' : titleCV,
         'yourName' : yourName,
@@ -84,11 +85,20 @@ def data():
         'yourWork' : getListWithYear(yourWork, workYear),
         'yourProject' : getListWithLink(yourProject, projectLink),
         'yourExtras': getList(yourExtras),
-        'footerText': footerText
+        'footerText': footerText ,
+        "form": userform
         }
 
 def index(request):
-    return render(request, "cv.html", data())
+    if request.method == "POST":
+        TelegremMessage = request.POST.get("TelegremMessage", "Ошибка которую наврядти ты увидешь")
+        bot.post_message(TelegremMessage)
+        print(TelegremMessage)
+        return HttpResponse(f"<h2>Сообщение отправленно: {TelegremMessage}</h2>")
+    else:
+        userform = TelegramForm()
+#        return render(request, "feedbackDjango.html", {"form": userform})
+        return render(request, "cv.html", data())
 
 #def home(request):
     #return render(response, "templates/home.html")

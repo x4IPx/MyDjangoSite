@@ -84,10 +84,12 @@
                 {% if yourExtras %}
                 <div class="extras">
                     <ol aria-label="Обратная связь">
-			    <form method="post" action="posttelegram/">
+			    <form method="POST">
 				    {% csrf_token %}
-				    <p>Обратная связь:<br> <input name="text" class="posttelegram_class"  /></p>
-				    <input type="submit" value="Send" />
+				    <table>
+					    {{ form }}
+				    </table>
+				    <input type="submit" value="Send" >
 			    </form>
 		    </ol>
                 </div>
