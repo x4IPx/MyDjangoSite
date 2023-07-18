@@ -3,6 +3,9 @@ from django.shortcuts import render
 from .data import *
 import html
 from django.utils.html import escape
+from forms import TelegramForm
+from core import bot
+from django.contrib import messages
 
 def getSkills():
     i = 0
@@ -67,6 +70,7 @@ def getSocials(shema, link):
             return html.unescape(gotoshow)
 
 def data():
+    userform = TelegramForm()
     return {
         'titleCV' : titleCV,
         'yourName' : yourName,
@@ -82,11 +86,36 @@ def data():
         'yourWork' : getListWithYear(yourWork, workYear),
         'yourProject' : getListWithLink(yourProject, projectLink),
         'yourExtras': getList(yourExtras),
-        'footerText': footerText
+        'footerText': footerText ,
+        "form": userform
         }
 
 def index(request):
-    return render(request, "cv.html", data())
+    if request.method == "POST":
+        TelegremMessage = request.POST.get("TelegremMessage", "Ошибка которую наврядти ты увидешь")
+        bot.post_message(TelegremMessage)
+        print(TelegremMessage)
+        messages.success(request, 'Сообщение отправленно. Спасибо за отзыв!')
+        return render(request, "cv.html", data())
+#        return HttpResponse(f"<h2>Сообщение отправленно: {TelegremMessage}</h2>")
+    else:
+        userform = TelegramForm()
+#        return render(request, "feedbackDjango.html", {"form": userform})
+        return render(request, "cv.html", data())
 
 #def home(request):
     #return render(response, "templates/home.html")
+
+
+def feedback(request):
+    return render(request, "feedback.html")
+
+def feedbackDjango(request):
+    if request.method == "POST":
+        TelegremMessage = request.POST.get("TelegremMessage", "Ошибка которую наврядти ты увидешь")
+        bot.post_message(TelegremMessage)
+        print(TelegremMessage)
+        return HttpResponse(f"<h2>Сообщение отправленно: {TelegremMessage}</h2>")
+    else:
+        userform = TelegramForm()
+        return render(request, "feedbackDjango.html", {"form": userform})

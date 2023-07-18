@@ -1,5 +1,5 @@
 """
-URL configuration for my_resume project.
+URL configuration for core project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 #from django.http import HttpResponse
-from my_resume import views
+from core import views
 from cv import cv_views
 from django.views.generic import TemplateView
 from django.views.generic import TemplateView
@@ -31,7 +31,8 @@ urlpatterns = [
     path("", views.index),
     path("2", cv_views.index),
     path("contacts/", views.contacts),
-    path("feedback", views.feedback),
+    path("feedback", cv_views.feedback),
+    path("feedbackDjango", cv_views.feedbackDjango),
     path("posttelegram/", views.posttelegram),
     path("base2", views.index2),
     path("contacts2/", views.contacts2),
