@@ -31,12 +31,6 @@
                 <p class="birth__date">{{ yourBirthday }}</p>
             </div>
             <div class="bio__area">
-                <div class="photo__area"><img src="{% static 'img/photo.jpg' %}" alt="{{ yourName | safe }}" /></div>
-                <div class="info__area">
-                    <p class="name">{{ yourName }}</p>
-                    <p class="profession">{{ yourProfession }}</p>
-                    <p class="bio">{{ yourBio }}</p>
-                </div>
             </div>
             <div class="exp__area">
                 {% if yourSkills %}
