@@ -15,11 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 #from django.http import HttpResponse
 from core import views
-from cv import cv_views
-from django.views.generic import TemplateView
+#from cv import views
 from django.views.generic import TemplateView
 #Для upload
 from django.conf import settings
@@ -29,11 +28,9 @@ from upload.views import image_upload
 
 urlpatterns = [
     path("", views.index),
-    path("2", cv_views.index),
+    path('cv', include('cv.urls')),
+#    path("2", cv_views.index),
     path("contacts/", views.contacts),
-    path("feedback", cv_views.feedback),
-    path("feedbackDjango", cv_views.feedbackDjango),
-    path("posttelegram/", views.posttelegram),
     path("base2", views.index2),
     path("contacts2/", views.contacts2),
     path('admin/', admin.site.urls),

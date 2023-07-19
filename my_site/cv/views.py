@@ -4,7 +4,7 @@ from .data import *
 import html
 from django.utils.html import escape
 from forms import TelegramForm
-from core import bot
+from cv import bot
 from django.contrib import messages
 
 def getSkills():
@@ -119,3 +119,13 @@ def feedbackDjango(request):
     else:
         userform = TelegramForm()
         return render(request, "feedbackDjango.html", {"form": userform})
+
+def posttelegram(request):
+    # получаем из данных запроса POST отправленные через форму данные
+    telegram_text = request.POST.get("text", "Undefined")
+    #name = request.POST.get("name", "Undefined")
+    #age = request.POST.get("age", 1)
+    bot.post_message(telegram_text)
+    print(telegram_text)
+    return HttpResponse(f"<h2>Спасибо за отзыв! Отпавленное сообщение : {telegram_text} </h2>")
+

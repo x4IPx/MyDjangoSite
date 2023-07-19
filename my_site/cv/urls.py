@@ -18,5 +18,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.index ),
+    path("/feedback", views.feedback),
+    path("/feedbackDjango", views.feedbackDjango),
+    path("/posttelegram/", views.posttelegram),
 ]

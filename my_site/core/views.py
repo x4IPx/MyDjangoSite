@@ -1,7 +1,6 @@
 # views.py
 
 from django.http import HttpResponse
-from core import bot
 from forms import TelegramForm
 
 
@@ -10,30 +9,6 @@ def index(request):
 
 def contacts(request):
     return render(request, "contacts.html")
-
-def feedback(request):
-    return render(request, "feedback.html")
-
-def feedbackDjango(request):
-    if request.method == "POST":
-        TelegremMessage = request.POST.get("TelegremMessage", "Ошибка которую наврядти ты увидешь")
-        bot.post_message(TelegremMessage)
-        print(TelegremMessage)
-        return HttpResponse(f"<h2>Сообщение отправленно: {TelegremMessage}</h2>")
-    else:
-        userform = TelegramForm()
-        return render(request, "feedbackDjango.html", {"form": userform})
-
-
-
-def posttelegram(request):
-    # получаем из данных запроса POST отправленные через форму данные
-    telegram_text = request.POST.get("text", "Undefined")
-    #name = request.POST.get("name", "Undefined")
-    #age = request.POST.get("age", 1)
-    bot.post_message(telegram_text)
-    print(telegram_text)
-    return HttpResponse(f"<h2>Спасибо за отзыв! Отпавленное сообщение : {telegram_text} </h2>")
 
 
 def hello_def(request):
