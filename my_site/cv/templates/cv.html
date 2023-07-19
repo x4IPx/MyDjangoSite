@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<div class="general__area">
+    <div class="general__area">
         <div class="top__area">
             <div class="bio__area">
                 <div class="photo__area"><img src="{% static 'img/photo.jpg' %}" alt="{{ yourName | safe }}" /></div>
@@ -29,6 +29,14 @@
                     {{ yourContact | safe }}
                 </div>
                 <p class="birth__date">{{ yourBirthday }}</p>
+            </div>
+            <div class="bio__area">
+                <div class="photo__area"><img src="{% static 'img/photo.jpg' %}" alt="{{ yourName | safe }}" /></div>
+                <div class="info__area">
+                    <p class="name">{{ yourName }}</p>
+                    <p class="profession">{{ yourProfession }}</p>
+                    <p class="bio">{{ yourBio }}</p>
+                </div>
             </div>
             <div class="exp__area">
                 {% if yourSkills %}
@@ -84,26 +92,26 @@
                 {% if yourExtras %}
                 <div class="extras">
                     <ol aria-label="Обратная связь">
-			    <form method="POST">
-				    {% csrf_token %}
-				    <table>
-					    {{ form }}
-				    </table>
-				    <div>
-					    {% if messages %}
-					    {% for message in messages %}
-					    <li class="{{ message.tags }}">
-						    {{ message|safe }}
-					    </li>
-					    {% endfor %}
-					    {% endif %}
-				    </div>
-				    <input type="submit" value="Send" >
-			    </form>
-		    </ol>
-		</div>
-		{% endif %}
-	    </div>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <table>
+                                {{ form }}
+                            </table>
+                            <div>
+                                {% if messages %}
+                                {% for message in messages %}
+                                <li class="{{ message.tags }}">
+                                    {{ message|safe }}
+                                </li>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                            <input type="submit" value="Send">
+                        </form>
+                    </ol>
+                </div>
+                {% endif %}
+            </div>
         </div>
     </div>
     <footer>{{ footerText | safe }}</footer>
