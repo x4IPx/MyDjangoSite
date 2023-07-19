@@ -8,7 +8,7 @@ yourName = "Барков Николай"
 yourProfession = "Системный администратор Linux"
 
 # type here your bio
-yourBio = "Здраствуйте. Так как у меня мало опыта с Ansible, Docker и GIT. Сделал резюмэ демонстрирующие мои навыки работы с Ansible, Docker и GIT." 
+yourBio = "Приветствую! Так как у меня небольшой опыт работы с Ansible, Docker, Git и PostgresSQL я составил резюме, которое демонстрирует мои навыки работы с этими инструментами." 
 
 # type here your current location
 yourCountry = "Москва"
