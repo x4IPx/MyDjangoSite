@@ -31,6 +31,9 @@
                 <p class="birth__date">{{ yourBirthday }}</p>
             </div>
             <div class="bio__area">
+                <ol aria-label="Skills">
+                    {{ yourSkills | safe }}
+                </ol>
             </div>
             <div class="exp__area">
                 {% if yourSkills %}
