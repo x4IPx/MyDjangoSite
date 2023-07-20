@@ -57,12 +57,12 @@ yourSkills = [
 
 # type here your skills percent rate
 skillsPercent = [
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
+    'Уменение применять в работе и написании кода. Нет опыта совместного использования',
+    'Понимание принципы работы',
+    'Умею писать PlayBook',
+    'Администрирование, писание простых запросов',
+    'Установка серверов, настройка , востановление работоспособности',
+    'Junior базовые знания. Ожадать навыки програмиста не стоит',
 ]
 
 # type here your hobbies
@@ -81,19 +81,19 @@ yourCerts = [
 
 # type here your education info
 yourEdu = [
-    'Woodlane High School',
-    'University of Oxford - Computer Science'
+    'Московский колледж управления и новых технологий',
+    'Техническое обслуживание вычислительной техники и компьютерных сетей'
 ]
 
 # type here your education years (start-end)
 eduYear = [
-    '2004 - 2008',
-    '2008 - 2013'
+    '2011',
+    '2016'
 ]
 
 # type here your work history
 yourWork = [
-    'NetSta Software - Senior Web Developer'
+    'Такском, ООО Техническая поддержка'
 ]
 
 # type here your work years (start-end)

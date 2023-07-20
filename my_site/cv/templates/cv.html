@@ -30,22 +30,22 @@
                 </div>
                 <p class="birth__date">{{ yourBirthday }}</p>
             </div>
-            <div class="bio__area">
-                <ol aria-label="Skills">
+            <div class="skins__area">
+                <ol aria-label="Навыки">
                     {{ yourSkills | safe }}
                 </ol>
             </div>
             <div class="exp__area">
                 {% if yourSkills %}
                 <div class="exp__box">
-                    <ol aria-label="Skills">
+                    <ol aria-label="Навыки">
                         {{ yourSkills | safe }}
                     </ol>
                 </div>
                 {% endif %}
                 {% if yourHobbies %}
                 <div class="exp__box">
-                    <ol aria-label="Hobbies">
+                    <ol aria-label="Хобби">
                         {{ yourHobbies | safe }}
                     </ol>
                 </div>
@@ -63,14 +63,14 @@
             <div class="status__area">
                 {% if yourEdu %}
                 <div class="education__area">
-                    <ol aria-label="Education">
+                    <ol aria-label="Образование">
                         {{ yourEdu | safe }}
                     </ol>
                 </div>
                 {% endif %}
                 {% if yourWork %}
                 <div class="work__area">
-                    <ol aria-label="Work">
+                    <ol aria-label="Работа">
                         {{ yourWork | safe }}
                     </ol>
                 </div>

@@ -89,6 +89,7 @@ a[href]:not(.social, .author)::after {
 .extras,
 .personal__area,
 .bio__area,
+.skins__area,
 .exp__box,
 .education__area,
 .work__area {
@@ -101,6 +102,15 @@ a[href]:not(.social, .author)::after {
     justify-content: center;
     flex-direction : row;
 }
+
+
+.skins__area {
+    display        : flex;
+    flex-direction : column;
+}
+
+
+
 
 .photo__area {
     margin-right   : 35px;
@@ -160,6 +170,7 @@ a[href]:not(.social, .author)::after {
 .extras,
 .personal__area,
 .bio__area,
+.skins__area,
 .exp__box,
 .education__area,
 .work__area {
@@ -280,7 +291,7 @@ li::before {
     padding      : 2px 6px;
     border-radius: 20px;
     box-shadow   : 6px 3px 4px 1px rgba(20, 20, 20, 0.25);
-    max-width    : 35%;
+    max-width    : 50%;
     font-size    : 15px;
 }
 
