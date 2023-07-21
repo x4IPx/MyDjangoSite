@@ -111,7 +111,7 @@ def index(request):
         bot.post_message(TelegremMessage)
         bot.post_message(get_client_ip(request))
         print(TelegremMessage)
-        messages.success(request, 'Сообщение отправленно. Спасибо за отзыв!')
+        messages.success(request, f'Сообщение отправленно. Спасибо за отзыв! Ваши анонимные данные: {get_client_ip(request)}')
         return render(request, "cv.html", data())
 #        return HttpResponse(f"<h2>Сообщение отправленно: {TelegremMessage}</h2>")
     else:
