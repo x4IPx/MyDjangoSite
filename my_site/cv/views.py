@@ -146,3 +146,16 @@ def posttelegram(request):
     bot.post_message(telegram_text)
     print(telegram_text)
     return HttpResponse(f"<h2>Спасибо за отзыв! Отпавленное сообщение : {telegram_text} </h2>")
+
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+        print(ip)
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+        print(ip)
+    return ip
+    
+#(c) http://stackoverflow.com/questions/4581789/how-do-i-get-user-ip-address-in-django
