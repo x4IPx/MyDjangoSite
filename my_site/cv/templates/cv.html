@@ -75,9 +75,7 @@
                             <div>
                                 {% if messages %}
                                 {% for message in messages %}
-                                <li class="{{ message.tags }}">
                                     {{ message|safe }}
-                                </li>
                                 {% endfor %}
                                 {% endif %}
                             </div>
