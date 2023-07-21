@@ -18,8 +18,8 @@ socialContact = [
     'fab fa-github',
 #    'fab fa-linkedin',
 #    'fab fa-instagram',
-#    'fab fa-twitter',
-#    'fab fa-facebook',
+    'fab fa-vk',
+    'fab fa-telegram',
     'fas fa-envelope',
     'fas fa-phone-alt'
 ]
@@ -33,10 +33,10 @@ yourContact = [
     # instagram link
 #   'https://instagram.com',
     # twitter link
-#    'https://twitter.com',
-    # facebook link
-#    'https://facebook.com',
+    'https://vk.com/x4ipx',
     # mailto:...your email
+    'https://t.me/Karambara',
+    # facebook link
     'mailto:x4ipx91@gmail.com',
     # tel:...your phone no
     'tel:89652179849'
