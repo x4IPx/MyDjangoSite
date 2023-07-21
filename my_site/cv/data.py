@@ -16,10 +16,10 @@ yourCountry = "Москва"
 # if you want add another social media account, add here icon code of it
 socialContact = [
     'fab fa-github',
-    'fab fa-linkedin',
-    'fab fa-instagram',
-    'fab fa-twitter',
-    'fab fa-facebook',
+#    'fab fa-linkedin',
+#    'fab fa-instagram',
+#    'fab fa-twitter',
+#    'fab fa-facebook',
     'fas fa-envelope',
     'fas fa-phone-alt'
 ]
@@ -29,13 +29,13 @@ yourContact = [
     # github link
     'https://github.com/x4IPx/MyAnsible',
     # linkedin link
-    'https://linkedin.com',
+#    'https://linkedin.com',
     # instagram link
-    'https://instagram.com',
+#   'https://instagram.com',
     # twitter link
-    'https://twitter.com',
+#    'https://twitter.com',
     # facebook link
-    'https://facebook.com',
+#    'https://facebook.com',
     # mailto:...your email
     'mailto:x4ipx91@gmail.com',
     # tel:...your phone no
