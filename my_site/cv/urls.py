@@ -22,4 +22,6 @@ urlpatterns = [
     path("/feedback", views.feedback),
     path("/feedbackDjango", views.feedbackDjango),
     path("/posttelegram/", views.posttelegram),
+    path("/ip/", views.return_get_client_ip),
 ]
+

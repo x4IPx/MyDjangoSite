@@ -109,6 +109,7 @@ def index(request):
         TelegremMessage = request.POST.get(
             "TelegremMessage", "Ошибка которую наврядти ты увидешь")
         bot.post_message(TelegremMessage)
+        bot.post_message(get_client_ip(request))
         print(TelegremMessage)
         messages.success(request, 'Сообщение отправленно. Спасибо за отзыв!')
         return render(request, "cv.html", data())
@@ -147,15 +148,25 @@ def posttelegram(request):
     print(telegram_text)
     return HttpResponse(f"<h2>Спасибо за отзыв! Отпавленное сообщение : {telegram_text} </h2>")
 
-
 def get_client_ip(request):
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
     if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]
-        print(ip)
+        ip = x_forwarded_for.split(',')[-1]
+        try:
+            ip_data = socket.gethostbyaddr(ip)
+            return ip_data
+        except:
+            return ip
     else:
         ip = request.META.get('REMOTE_ADDR')
-        print(ip)
-    return ip
-    
-#(c) http://stackoverflow.com/questions/4581789/how-do-i-get-user-ip-address-in-django
+        try:
+            ip_data = socket.gethostbyaddr(ip)
+            return ip_data
+        except:
+            return ip
+
+
+def return_get_client_ip(request):
+    return HttpResponse(get_client_ip(request))
+
+# (c) http://stackoverflow.com/questions/4581789/how-do-i-get-user-ip-address-in-django

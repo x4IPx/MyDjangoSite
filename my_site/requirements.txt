@@ -4,24 +4,43 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
+anyio==3.7.1
+    # via httpcore
 asgiref==3.7.2
     # via django
 certifi==2023.5.7
-    # via requests
+    # via
+    #   httpcore
+    #   requests
 charset-normalizer==3.2.0
     # via requests
 django==4.2.3
     # via -r requirements.in
+dnspython==2.4.0
+    # via nslookup
 gunicorn==20.1.0
     # via -r requirements.in
+h11==0.14.0
+    # via httpcore
+httpcore==0.17.3
+    # via dnspython
 idna==3.4
-    # via requests
+    # via
+    #   anyio
+    #   requests
+nslookup==1.7.0
+    # via -r requirements.in
 psycopg2-binary==2.9.6
     # via -r requirements.in
 python-dotenv==1.0.0
     # via -r requirements.in
 requests==2.31.0
     # via -r requirements.in
+sniffio==1.3.0
+    # via
+    #   anyio
+    #   dnspython
+    #   httpcore
 sqlparse==0.4.4
     # via django
 urllib3==2.0.3

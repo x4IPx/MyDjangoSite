@@ -35,29 +35,7 @@
                     {{ yourSkills | safe }}
                 </ol>
             </div>
-            <div class="exp__area">
-                {% if yourSkills %}
-                <div class="exp__box">
-                    <ol aria-label="Навыки">
-                        {{ yourSkills | safe }}
-                    </ol>
-                </div>
-                {% endif %}
-                {% if yourHobbies %}
-                <div class="exp__box">
-                    <ol aria-label="Хобби">
-                        {{ yourHobbies | safe }}
-                    </ol>
-                </div>
-                {% endif %}
-                {% if yourCerts %}
-                <div class="exp__box">
-                    <ol aria-label="Certificates">
-                        {{ yourCerts | safe }}
-                    </ol>
-                </div>
-                {% endif %}
-            </div>
+
         </div>
         <div class="mid__area">
             <div class="status__area">
@@ -81,8 +59,8 @@
             <div class="history__area">
                 {% if yourProject %}
                 <div class="project__area">
-                    <ol aria-label="Projects">
-                        {{ yourProject | safe }}
+                    <ol aria-label="Хобби">
+                        {{ yourHobbies | safe }}
                     </ol>
                 </div>
                 {% endif %}

@@ -2,7 +2,7 @@ import requests
 import os
 from dotenv import load_dotenv
 load_dotenv()
-
+import socket
 telegram_token = os.getenv("telegram_token")
 telegram_chat_id = os.getenv("telegram_chat_id")
 telegtam_to = os.getenv("telegtam_to")
@@ -27,3 +27,4 @@ def post_message(message, TOKEN=telegram_token, chat_id=telegram_chat_id):
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
     # Эта строка отсылает сообщение одновременно в telegtam и bash
     print(requests.get(url).json())
+
