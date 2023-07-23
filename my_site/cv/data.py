@@ -95,12 +95,16 @@ eduYear = [
 
 # type here your work history
 yourWork = [
-    'Такском, ООО Техническая поддержка'
+    'Такском, ООО Техническая поддержка',
+    'Типография КЕМ. Системный администратор ',
+    'В доступе, Системный Администратор'   
 ]
 
 # type here your work years (start-end)
 workYear = [
-    'August 2016 - Present'
+    'August 2016 - Present',
+    'August 2016 - Present',
+    'August 2016 - Present',
 ]
 
 # type here your projects
@@ -119,6 +123,6 @@ yourExtras = [
 ]
 
 # footer text in here (please don't change)
-footerText = "Django Personal CV developed by <a target='_blank' class='author' href='https://github.com/en0ndev'>en0ndev</a>"
+footerText = ""
 
 # thank you for use this template.
