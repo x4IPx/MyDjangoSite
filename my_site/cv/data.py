@@ -102,9 +102,9 @@ yourWork = [
 
 # type here your work years (start-end)
 workYear = [
-    'August 2016 - Present',
-    'August 2016 - Present',
-    'August 2016 - Present',
+    '2011 - 2013',
+    '2013 - 2021 ',
+    '2021 - Present',
 ]
 
 # type here your projects
