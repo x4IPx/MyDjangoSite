@@ -123,6 +123,6 @@ yourExtras = [
 ]
 
 # footer text in here (please don't change)
-footerText = "За основу взят чужой проект: <a target='_blank' class='author' href='https://github.com/en0ndev'>en0ndev</a> "
+footerText = "За основу взят чужой проект: <a target='_blank' class='author' href='https://github.com/en0ndev/django-personal-cv'>en0ndev</a> "
 
 # thank you for use this template.
