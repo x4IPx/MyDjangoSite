@@ -47,9 +47,9 @@ yourBirthday = "09 Сентября 1991"
 
 # type here your skills
 yourSkills = [
-    'GIT',
-    'Docker',
-    'Ansible',
+    "<a target='_blank' class='author' href='https://github.com/x4IPx/MyDjangoSite'>GIT</a>",
+    "<a target='_blank' class='author' href='https://github.com/x4IPx/MyDjangoSite'>Docker</a>",
+    "<a target='_blank' class='author' href='https://github.com/x4IPx/MyAnsible/tree/mainLAB'>Ansible</a>",
     'SQL',
     'Администрирование ЛВС',
     'Администрирование Windiws/linux',
@@ -64,7 +64,7 @@ skillsPercent = [
     'работать с базами данных ,создавать востанавлевать бекапы, проводить регламентированные работы.',
     'настраивать сетевое оборудование, понимаю сетевой стек IPTables,VPN,DNS,DHCP.',
     'Настройка серверов, востановление работоспособности',
-    'Junior. Я не программист, но умею использовать Python в работе.',
+    'Junior-Любитель. Я не программист, но умею использовать Python в работе.',
 ]
 
 # type here your hobbies
